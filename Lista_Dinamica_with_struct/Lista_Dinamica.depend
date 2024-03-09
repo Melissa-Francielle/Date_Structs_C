@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1709961847 source:c:\users\note\3d objects\estudos\faculdade\estrutura de dados\exame_final\lista\lista_dinamica\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ListaD.h"
+
+1709961862 c:\users\note\3d objects\estudos\faculdade\estrutura de dados\exame_final\lista\lista_dinamica\listad.h
+
+1709961323 source:c:\users\note\3d objects\estudos\faculdade\estrutura de dados\exame_final\lista\lista_dinamica\listad.c
+	<stdio.h>
+	<stdlib.h>
+	"ListaD.h"
+
