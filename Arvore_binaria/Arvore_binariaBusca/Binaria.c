@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include "Binaria.h"
 
-//Inserção na arvore
-/*Lembrando que a árvore utiliza a raiz para iniciar a inserção
+//InserÃ§Ã£o na arvore
+/*Lembrando que a Ã¡rvore utiliza a raiz para iniciar a inserÃ§Ã£o
 ex:         50
            /  \
           25  100   */
@@ -20,7 +20,7 @@ No* arvore_vazia(){
 
 //Insere na arvore
 No* insercao_Arvore(No *raiz, int num){
-    if(raiz == NULL){ //primeiro nó da arvore;
+    if(raiz == NULL){ //primeiro nÃ³ da arvore;
         No *aux = malloc(sizeof(No));
         aux->valor = num;
         aux->esquerda = NULL;
@@ -70,7 +70,7 @@ void imprimir_ordenada(No *raiz){
         imprimir_ordenada(raiz->direita);
     }
 }
-//Contar a quantidade de nós da arvore
+//Contar a quantidade de nÃ³s da arvore
 int quantidade(No* raiz){
     if(raiz == NULL){
         return 0;
@@ -117,18 +117,20 @@ No* remove_no(No*raiz, int chave){
     }
     else{
         if(raiz->valor == chave){
+                   //nÃ³ sem filhos
             if(raiz->esquerda == NULL && raiz->direita == NULL){
                 free(raiz);
                 printf("Elemento folha removido: %d\n", chave);
                 return NULL;
             }
             else{
-                //remover nós que possuem 1 ou 2 filhos;
+                //remover nÃ³s que possuem 1 ou 2 filhos;
                 if(raiz->esquerda != NULL && raiz->direita != NULL){
                     No* aux = raiz->esquerda;
                     while(aux->direita != NULL){
                         aux = aux->direita;
                     }
+                           //troca informaÃ§Ãµes
                     raiz->valor = aux->valor;
                     aux->valor= chave;
                     printf("\nElemento trocado: %d\n", chave);
@@ -136,6 +138,7 @@ No* remove_no(No*raiz, int chave){
                     return raiz;
                 }
                 else{
+                           //filhos em apenas uma das direÃ§Ãµes
                     No* aux;
                     if(raiz->esquerda != NULL){
                         aux = raiz->esquerda;
