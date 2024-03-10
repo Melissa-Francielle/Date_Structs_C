@@ -109,7 +109,7 @@ int altura(No* raiz){
     }
 }
 
-//Removendo um no folha
+//Removendo 
 No* remove_no(No*raiz, int chave){
     if(raiz == NULL){
         printf("\nValor nao encontrado!\n");
